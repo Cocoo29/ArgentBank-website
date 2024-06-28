@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Cocoo29/ArgentBank-website/static/css/main.7eee9693.css",
-    "main.js": "/Cocoo29/ArgentBank-website/static/js/main.1adb7d2e.js",
+    "main.js": "/Cocoo29/ArgentBank-website/static/js/main.644d9888.js",
     "static/media/bank-tree.jpeg": "/Cocoo29/ArgentBank-website/static/media/bank-tree.4d59987c7c62b024b014.jpeg",
     "static/media/icon-security.png": "/Cocoo29/ArgentBank-website/static/media/icon-security.1c819fa1007a5c53e6a9.png",
     "static/media/argentBankLogo.png": "/Cocoo29/ArgentBank-website/static/media/argentBankLogo.e031a16c76ab9bbbf78a.png",
@@ -9,10 +9,10 @@
     "static/media/icon-money.png": "/Cocoo29/ArgentBank-website/static/media/icon-money.8ec88bb1a5070fd6513a.png",
     "index.html": "/Cocoo29/ArgentBank-website/index.html",
     "main.7eee9693.css.map": "/Cocoo29/ArgentBank-website/static/css/main.7eee9693.css.map",
-    "main.1adb7d2e.js.map": "/Cocoo29/ArgentBank-website/static/js/main.1adb7d2e.js.map"
+    "main.644d9888.js.map": "/Cocoo29/ArgentBank-website/static/js/main.644d9888.js.map"
   },
   "entrypoints": [
     "static/css/main.7eee9693.css",
-    "static/js/main.1adb7d2e.js"
+    "static/js/main.644d9888.js"
   ]
 }
