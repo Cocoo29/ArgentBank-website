@@ -1,5 +1,5 @@
-const axios = require('axios')
-const signupApi = 'http://localhost:3001/api/v1/user/signup'
+const axios = require('axios');
+const signupApi = 'http://localhost:3001/api/v1/user/signup';
 
 const users = [
   {
@@ -16,11 +16,15 @@ const users = [
     password: 'password456',
     userName: 'Captain'
   }
-]
+];
 
 users.forEach(user => {
   axios
     .post(signupApi, user)
-    .then(response => console.log(response))
-    .catch(error => console.log(error))
-})
+    .then(response => {
+      console.log('User signed up successfully:', response.data);
+    })
+    .catch(error => {
+      console.error('Error signing up user:', error.response.data);
+    });
+});
