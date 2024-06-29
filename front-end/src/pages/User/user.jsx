@@ -15,7 +15,7 @@ function User() {
  
   useEffect(() => {
     if (!token) {
-      navigate('/')
+      navigate('/login')
     }
   }, [token, navigate])
   

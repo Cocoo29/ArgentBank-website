@@ -61,11 +61,14 @@ export const loginSuccess = (data) => ({
 
 // Logout action
 
-export const logout = () => async (dispatch) => {
-  dispatch(userLogout())
-  dispatch(userProfileReset())
-}
+export const logout = () => (dispatch) => {
+  dispatch(userLogout());
+  dispatch(userProfileReset());
 
+  // Supprime les informations d'authentification du stockage local
+  localStorage.removeItem('userToken');
+  sessionStorage.removeItem('userToken');
+};
 // User logout
 export const userLogout = () => ({ type: USER_LOGOUT })
 

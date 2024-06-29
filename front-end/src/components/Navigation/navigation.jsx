@@ -1,29 +1,27 @@
-import logo from '../../assets/argentBankLogo.png'
-import { Link } from 'react-router-dom'
-import { useDispatch, useSelector } from 'react-redux'
-import { useNavigate } from 'react-router'
-import { logout } from '../../actions/actions'
-import './navigation.css'
+// components/Navigation/navigation.jsx
+
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { Link, useNavigate } from 'react-router-dom'; // Utilisez useNavigate
+import { logout } from '../../actions/actions';
+import logo from '../../assets/argentBankLogo.png';
+import './navigation.css';
 
 function Navigation() {
-  let navigate = useNavigate()
-  const dispatch = useDispatch()
-  const { token } = useSelector((state) => state.userLogin)
-  const { firstName } = useSelector((state) => state.userProfile)
+  const dispatch = useDispatch();
+  const { token } = useSelector((state) => state.userLogin);
+  const { firstName } = useSelector((state) => state.userProfile);
+  const navigate = useNavigate(); // Initialisez useNavigate
 
   const logoutHandler = () => {
-    dispatch(logout())
-    navigate('/')
-  }
+    dispatch(logout());
+    navigate('/login'); // Utilisez navigate pour rediriger
+  };
 
   return (
     <nav className="main-nav">
       <Link className="main-nav-logo" to="/">
-        <img
-          className="main-nav-logo-image"
-          src={logo}
-          alt="Argent Bank Logo"
-        />
+        <img className="main-nav-logo-image" src={logo} alt="Argent Bank Logo" />
       </Link>
       <div>
         {!token ? (
@@ -43,7 +41,7 @@ function Navigation() {
           ''
         )}
         {token ? (
-          <Link onClick={logoutHandler} className="main-nav-item" to="/">
+          <Link className="main-nav-item" onClick={logoutHandler} to="/login">
             <i className="fa fa-sign-out"></i>
             Sign Out
           </Link>
@@ -52,8 +50,7 @@ function Navigation() {
         )}
       </div>
     </nav>
-  )
+  );
 }
-
 
 export default Navigation;
